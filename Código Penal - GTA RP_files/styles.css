@@ -1,0 +1,188 @@
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; /* Dá ao corpo um tom de cinza claro, popular em muitos designs modernos */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos do cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff; /* Uma cor de fundo clara para destacar o cabeçalho */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 2.5em; /* Aumenta o tamanho da fonte para ser mais notável */
+}
+
+/* Estilos do rodapé */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.875em; /* Reduz a fonte para diferenciar do conteúdo principal */
+}
+
+.titulo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* Torna o título um pouco mais escuro */
+}
+
+.descricao {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #666; /* Torna o texto um pouco mais escuro */
+}
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redes-sociais,
+.redes-sociais-footer {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+    display: flex; /* Alinha os ícones horizontalmente */
+    justify-content: center; /* Centraliza os ícones */
+}
+
+.redes-sociais a,
+.redes-sociais-footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em; /* Aumenta o tamanho dos ícones */
+}
+
+.logo {
+    width: 80px; /* Defina a largura desejada para a imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas à imagem do logo */
+}
+
+/* Estilos do vídeo */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilos do formulário e resultado */
+#crimeForm {
+    margin-bottom: 30px;
+}
+
+#resultado {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px; /* Adiciona bordas arredondadas ao resultado */
+}
+
+.card-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: #666; /* Torna o texto um pouco mais escuro */
+}
+
+.card button {
+    margin-bottom: 10px;
+    background-color: #007BFF; /* Cor de fundo para o botão */
+    color: #FFF; /* Cor do texto para o botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Padding para tornar o botão maior */
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 1em; /* Tamanho do texto do botão */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.card button:hover {
+    background-color: #0056b3; /* Muda a cor de fundo quando o mouse está sobre o botão */
+}
+
+#resultado-copiado {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px; /* Adiciona bordas arredondadas ao resultado copiado */
+}
+
+/* Estilos das redes sociais no rodapé */
+.redes-sociais-footer {
+    margin-top: 10px;
+}
+
+/* Estilos do menu */
+.navbar {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 1.5em; /* Aumenta o tamanho da fonte da marca */
+}
+
+.navbar .nav-link {
+    color: #fff;
+    padding: 10px 20px; /* Padding para tornar os links maiores */
+    transition: color 0.3s ease; /* Transição suave para o hover */
+}
+
+.navbar .nav-link.active {
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+    color: #ccc; /* Muda a cor quando o mouse está sobre o link */
+}
+
+.navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Aumenta a margem para dar mais espaço entre os itens */
+}
+
+/* Estilos personalizados */
+.navbar {
+    background-color: #000 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.navbar-light .navbar-toggler-white {
+    color: #fff;
+    border-color: #fff;
+}
