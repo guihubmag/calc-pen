@@ -97,8 +97,10 @@ if (selectAtenuantes) {
 }
 
 
+// ...
+
 // Calcular a pena quando o formulário for submetido
-document.getElementById('crimeForm').addEventListener('submit', function(event) {
+document.getElementById('crimeForm').addEventListener('submit', function (event) {
     event.preventDefault();  // Impede que o formulário seja submetido normalmente
 
     var nomeAcusado = document.getElementById('nomeAcusado').value;
@@ -114,9 +116,10 @@ document.getElementById('crimeForm').addEventListener('submit', function(event) 
     var multaTotal = 0;
     var fiancaTotal = 0;
     for (var i = 0; i < crimesSelecionados.length; i++) {
-        penaTotal += codigoPenal[crimesSelecionados[i].value].sentenca;
-        multaTotal += codigoPenal[crimesSelecionados[i].value].multa;
-        fiancaTotal += codigoPenal[crimesSelecionados[i].value].valor_fianca;
+        // Aplicar a redução de 85% na pena, multa e fiança
+        penaTotal += codigoPenal[crimesSelecionados[i].value].sentenca * 0.35;
+        multaTotal += codigoPenal[crimesSelecionados[i].value].multa * 0.35;
+        fiancaTotal += codigoPenal[crimesSelecionados[i].value].valor_fianca * 0.35;
     }
 
     var reducaoTotal = 0;
@@ -136,11 +139,11 @@ document.getElementById('crimeForm').addEventListener('submit', function(event) 
         crimesCometidos.push(codigoPenal[crimesSelecionados[i].value].crime);
     }
 
-    var fiancaPaga  = document.getElementById('pagarFianca').value;
+    var fiancaPaga = document.getElementById('pagarFianca').value;
 
-    document.getElementById('pena-total').textContent = '⏲️ Total da Pena: ' + penaTotal + ' meses';
+    document.getElementById('pena-total').textContent = '⏲️ Total da Pena: ' + penaTotal.toFixed(2) + ' meses';
     document.getElementById('reducao-aplicada').textContent = '📉 Redução Aplicada: ' + (reducaoTotal * 100) + '%';
-    document.getElementById('pena-reduzida').textContent = '📅⚖️ Total da Pena Reduzida: ' + penaReduzida + ' meses';
+    document.getElementById('pena-reduzida').textContent = '📅⚖️ Total da Pena Reduzida: ' + penaReduzida.toFixed(2) + ' meses';
     document.getElementById('total-multa').textContent = '💵 Total de Multa: R$ ' + multaTotal.toFixed(2);
     document.getElementById('valor-fianca-total').textContent = '💵 Valor da Fiança Total: R$ ' + fiancaTotal.toFixed(2);
     document.getElementById('crimes-cometidos').textContent = '⚖️ Crimes Cometidos: ' + crimesCometidos.join(', ');
