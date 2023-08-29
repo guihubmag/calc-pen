@@ -186,3 +186,7 @@ h1 {
     color: #fff;
     border-color: #fff;
 }
+
+#crimes, #atenuantes{
+    min-height: 200px;
+}
